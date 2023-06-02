@@ -2,9 +2,9 @@
 
 <p align="center">
   <img src="./assets/img/gnome-music.svg" alt="Audio Player" />
+  <br />
+  Simple audio player for the masses.
 </p>
-
-Simple audio player for the masses.
 
 ## Demo
 
