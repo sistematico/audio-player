@@ -1,9 +1,15 @@
 # Web Audio Player
 
-<div style="text-align: center;">
+<p align="center">
   <img src="./assets/img/gnome-music.svg" alt="Audio Player" />
-</div>
+</p>
 
-## Crédits
+Simple audio player for the masses.
 
-- https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
+## Demo
+
+- https://sistematico.github.io/audio-player
+
+## Credits
+
+- https://www.geeksforgeeks.org/create-a-music-player-using-javascript
