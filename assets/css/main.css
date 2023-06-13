@@ -1,9 +1,9 @@
-body {
+/* body {
   background-color: lightgreen;
   transition: background-color 0.5s;
-}
+}*/
 
-.player {
+body {
   height: 95vh;
   display: flex;
   align-items: center;
@@ -11,117 +11,271 @@ body {
   justify-content: center;
 }
 
+/*
 .details {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   margin-top: 25px;
-}
+} */
 
-.track-art {
-  margin: 25px;
-  height: 250px;
+
+
+/* Spotify music card made by: csozi | Website: www.csozi.hu*/
+
+.card {
+  position: relative;
   width: 250px;
-  background-image: url('https://images.pexels.com/photos/262034/pexels-photo-262034.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
-  background-size: cover;
-  border-radius: 15%;
+  height: 120px;
+  background: #191414;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.now-playing {
-  font-size: 1rem;
-}
-
-.track-name {
-  font-size: 3rem;
-}
-
-.track-artist {
-  font-size: 1.5rem;
-}
-
-.buttons {
+.top {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  gap: 10px;
 }
 
-.playpause-track,
-.prev-track,
-.next-track {
-  padding: 25px;
-  opacity: 0.8;
-
-  /* Smoothly transition the opacity */
-  transition: opacity 0.2s;
-}
-
-.playpause-track:hover,
-.prev-track:hover,
-.next-track:hover {
-  opacity: 1;
-}
-
-.slider_container {
-  width: 75%;
-  max-width: 400px;
+.pfp {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  height: 40px;
+  width: 40px;
+  background-color: #d2d2d2;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* Modify the appearance of the slider */
-.seek_slider,
-.volume_slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5px;
-  background: black;
-  opacity: 0.7;
+.texts {
+  margin: 0;
+}
+
+.title-1 {
+  color: white;
+  font-size: 25px; 
+  font-weight: bolder;
+  margin: 0;
+}
+
+.title-2 {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.time {
+  width: 90%;
+  background-color: #5e5e5e;
+  height: 6px;
+  border-radius: 3px;
+  position: absolute;
+  left: 5%;
+  bottom: 22px;
+}
+
+.elapsed {
+  width: 42%;
+  background-color: #1db954;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.controls {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.volume {
+  height: 100%;
+  width: 48px;
+}
+
+.air {
+  height: 100%;
+  width: 48px;
+}
+
+.controls svg {
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.controls svg:hover {
+  color: #1db954;
+}
+
+.volume {
+  /* opacity: 0; */
+  position: relative;
   -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
+  transition: 0.2s;
 }
 
-/* Modify the appearance of the slider thumb */
-.seek_slider::-webkit-slider-thumb,
-.volume_slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background: white;
-  cursor: pointer;
-  border-radius: 50%;
+.volume .slider {
+  height: 4px;
+  background-color: #5e5e5e;
+  width: 80%;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-left: 10%;
 }
 
-.seek_slider:hover,
-.volume_slider:hover {
+.volume .slider .green {
+  background-color: #1db954;
+  height: 100%;
+  width: 80%;
+  border-radius: 3px;
+}
+
+.volume .circle {
+  background-color: white;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  position: absolute;
+  right: 20%;
+  top: 60%;
+}
+
+/* .volume_button:hover ~ .volume {
   opacity: 1;
+} */
+
+.timetext {
+  color: white;
+  font-size: 8px;
+  position: absolute;
+  margin: 0;
 }
 
-.seek_slider {
-  width: 60%;
+.time_now {
+  bottom: 11px;
+  left: 10px;
 }
 
-.volume_slider {
-  width: 30%;
+.time_full {
+  bottom: 11px;
+  right: 10px;
 }
 
-.current-time,
-.total-duration {
-  padding: 10px;
+.playing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1px;
+  width: 30px;
+  height: 20px;
 }
 
-i.fa-volume-down,
-i.fa-volume-up {
-  padding: 10px;
+.greenline {
+  background-color: #1db954;
+  height: 20px;
+  width: 2px;
+  position: relative;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
-i.fa-play-circle,
-i.fa-pause-circle,
-i.fa-step-forward,
-i.fa-step-backward {
-  cursor: pointer;
+.line-1 {
+  -webkit-animation: infinite playing 1s ease-in-out;
+          animation: infinite playing 1s ease-in-out;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.line-2 {
+  -webkit-animation: infinite playing 1s ease-in-out;
+          animation: infinite playing 1s ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.line-3 {
+  -webkit-animation: infinite playing 1s ease-in-out;
+          animation: infinite playing 1s ease-in-out;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.line-4 {
+  -webkit-animation: infinite playing 1s ease-in-out;
+          animation: infinite playing 1s ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.line-5 {
+  -webkit-animation: infinite playing 1s ease-in-out;
+          animation: infinite playing 1s ease-in-out;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes playing {
+  0% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+  33% {
+    -webkit-transform: scaleY(0.6);
+            transform: scaleY(0.6);
+  }
+  66% {
+    -webkit-transform: scaleY(0.9);
+            transform: scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+}
+
+@keyframes playing {
+  0% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+  33% {
+    -webkit-transform: scaleY(0.6);
+            transform: scaleY(0.6);
+  }
+  66% {
+    -webkit-transform: scaleY(0.9);
+            transform: scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
 }
